@@ -1,0 +1,26 @@
+{
+  "name": "delegate-dom",
+  "version": "0.0.0",
+  "description": "Low-level event delegation library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "fox -b"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/azer/delegate-dom.git"
+  },
+  "keywords": [
+    "delegate",
+    "dom"
+  ],
+  "author": "TJ Holowaychuk",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/azer/delegate-dom/issues"
+  },
+  "dependencies": {
+    "on-off": "0.0.2",
+    "matches-dom-selector": "0.0.0"
+  }
+}

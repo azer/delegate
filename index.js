@@ -1,9 +1,13 @@
+module.exports = on;
+module.exports.on = on;
+module.exports.off = off;
+
 /**
  * Module dependencies.
  */
 
-var matches = require('matches-selector')
-  , event = require('event');
+var matches = require('matches-dom-selector')
+  , on = require('on-off');
 
 /**
  * Delegate event `type` to `selector`
@@ -19,8 +23,8 @@ var matches = require('matches-selector')
  * @api public
  */
 
-exports.bind = function(el, selector, type, fn, capture){
-  return event.bind(el, type, function(e){
+function on(el, selector, type, fn, capture){
+  return on(el, type, function(e){
     if (matches(e.target || e.srcElement, selector)) fn.call(el, e);
   }, capture);
 };
@@ -35,6 +39,6 @@ exports.bind = function(el, selector, type, fn, capture){
  * @api public
  */
 
-exports.unbind = function(el, type, fn, capture){
-  event.unbind(el, type, fn, capture);
+function off(el, type, fn, capture){
+  on.off(el, type, fn, capture);
 };

@@ -1,37 +1,21 @@
 
 # delegate
 
-  Low-level event delegation component.
+  Low-level event delegation library.
 
 ## Installation
 
-    $ component install component/delegate
+    $ npm install delegate-dom
 
 ## Example
 
 ```js
-var delegate = require('delegate');
-var ul = document.querySelector('ul');
-var n = 0;
+delegate = require('delegate')
 
-var fn = delegate.bind(ul, 'li a', 'click', function(e){
-  console.log(e.target);
-  if (++n == 3) {
-    console.log('unbind');
-    delegate.unbind(ul, 'click', fn, false);
-  }
-}, false);
+fn = delegate.on(document.body, 'ul li a', 'click', function (e) {
+  delegate.off(document.body, 'click', fn);
+})
 ```
-
-## API
-
-### .bind(el, selector, type, callback, [capture])
-
-  Bind and return a callback which may be passed to `.unbind()`.
-
-### .unbind(el, type, callback, [capture])
-
-  Unbind.
 
 ## License
 
