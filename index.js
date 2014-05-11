@@ -7,7 +7,7 @@ module.exports.off = off;
  */
 
 var matches = require('matches-dom-selector')
-  , on = require('on-off');
+  , on = require('dom-event');
 
 /**
  * Delegate event `type` to `selector`

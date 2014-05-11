@@ -1,16 +1,16 @@
 
-# delegate
+# delegate-dom
 
   Low-level event delegation library.
 
-## Installation
+## Install
 
     $ npm install delegate-dom
 
 ## Example
 
 ```js
-delegate = require('delegate')
+var delegate = require('delegate')
 
 fn = delegate.on(document.body, 'ul li a', 'click', function (e) {
   delegate.off(document.body, 'click', fn);

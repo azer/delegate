@@ -1,15 +1,15 @@
+var test = require('prova');
 var on = require("./");
 
-before(function(done){
-  document.body.innerHTML = '<ul><li><a>Foo</a></li><li>Bar</li><li>Qux</li></ul>';
-  done();
-});
+document.body.innerHTML = '<ul><li><a>Foo</a></li><li>Bar</li><li>Qux</li></ul>';
 
-it('adds event to specified selector', function(done){
+test('adds event to specified selector', function (t) {
+  t.plan(1);
+
   var fn = on(document.body, 'ul li a', 'click', function (e) {
     on.off(document.body, 'click', fn);
     document.querySelector('ul li a').click();
-    done();
+    t.ok(true);
   });
 
   document.querySelector('ul li a').click();

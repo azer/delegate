@@ -4,11 +4,11 @@
   "description": "Low-level event delegation library.",
   "main": "index.js",
   "scripts": {
-    "test": "fox -b"
+    "test": "node test -b"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/azer/delegate-dom.git"
+    "url": "git://github.com/npm-dom/dom-delegate.git"
   },
   "keywords": [
     "delegate",
@@ -16,11 +16,11 @@
   ],
   "author": "TJ Holowaychuk",
   "license": "BSD",
-  "bugs": {
-    "url": "https://github.com/azer/delegate-dom/issues"
-  },
   "dependencies": {
-    "on-off": "0.0.2",
+    "dom-event": "0.0.x",
     "matches-dom-selector": "0.0.0"
+  },
+  "devDependencies": {
+    "prova": "*"
   }
 }
