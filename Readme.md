@@ -12,8 +12,8 @@
 ```js
 var delegate = require('delegate')
 
-fn = delegate.on(document.body, 'ul li a', 'click', function (e) {
-  delegate.off(document.body, 'click', fn);
+delegate.on(document.body, 'ul li a', 'click', function self (e) {
+  delegate.off(document.body, 'click', self);
 })
 ```
 
