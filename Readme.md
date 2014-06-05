@@ -10,7 +10,7 @@
 ## Example
 
 ```js
-var delegate = require('delegate')
+var delegate = require('delegate-dom')
 
 delegate.on(document.body, 'ul li a', 'click', function self (e) {
   delegate.off(document.body, 'click', self);
