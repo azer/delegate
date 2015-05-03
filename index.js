@@ -6,7 +6,7 @@ module.exports.off = off;
  * Module dependencies.
  */
 
-var closest = require('closest')
+var closest = require('dom-closest')
   , on = require('dom-event');
 
 /**
@@ -26,7 +26,7 @@ var closest = require('closest')
 function on(el, selector, type, fn, capture){
   return on(el, type, function(e){
     var target = e.target || e.srcElement;
-    var delegateTarget = closest(target, selector, true);
+    var delegateTarget = closest(target, selector, el);
     if(delegateTarget) fn.call(el, e);
   }, capture);
 };
