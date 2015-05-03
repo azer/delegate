@@ -17,8 +17,8 @@
   "author": "TJ Holowaychuk",
   "license": "BSD",
   "dependencies": {
-    "dom-event": "0.0.x",
-    "matches-dom-selector": "0.0.0"
+    "dom-closest": "^0.1.0",
+    "dom-event": "0.0.x"
   },
   "devDependencies": {
     "prova": "*"
