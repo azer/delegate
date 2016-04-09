@@ -1,4 +1,4 @@
-var test = require('prova');
+var test = require('tape');
 var on = require("./");
 
 document.body.innerHTML = '<ul><li><a>Foo</a></li><li>Bar</li><li>Qux</li></ul>';

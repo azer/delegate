@@ -4,7 +4,7 @@
   "description": "Low-level event delegation library.",
   "main": "index.js",
   "scripts": {
-    "test": "node test -b"
+    "test": "browserify test.js | tape-run"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,9 @@
   "author": "TJ Holowaychuk",
   "license": "BSD",
   "dependencies": {
-    "dom-event": "0.0.x",
-    "matches-dom-selector": "0.0.0"
+    "dom-event": "~1.0.0",
+    "matches-dom-selector": "azer/matches-dom-selector"
   },
   "devDependencies": {
-    "prova": "*"
   }
 }
